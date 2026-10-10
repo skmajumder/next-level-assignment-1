@@ -2,21 +2,42 @@
 
 // * Question 1
 
-function describeValue(value) {
-  if (value) {
-    return typeof value + " | truthy";
+// function describeValue(value) {
+//   if (value) {
+//     return typeof value + " | truthy";
+//   }
+//   return typeof value + " | falsy";
+// }
+
+// console.log(describeValue(7));
+// console.log(describeValue("hello"));
+// console.log(describeValue(""));
+// console.log(describeValue(25));
+// console.log(describeValue(0));
+// console.log(describeValue(true));
+// console.log(describeValue(null));
+// console.log(describeValue(undefined));
+// console.log(describeValue(NaN));
+// console.log(describeValue({}));
+// console.log(describeValue([]));
+
+// * Question 2
+
+function getDayType(day) {
+  switch (day.toLowerCase()) {
+    case "friday":
+    case "saturday":
+      return "Weekend";
+    case "sunday":
+    case "monday":
+    case "tuesday":
+    case "wednesday":
+    case "thursday":
+      return "Working Day";
+    default:
+      return "Invalid Day";
   }
-  return typeof value + " | falsy";
 }
 
-console.log(describeValue(7));
-console.log(describeValue("hello"));
-console.log(describeValue(""));
-console.log(describeValue(25));
-console.log(describeValue(0));
-console.log(describeValue(true));
-console.log(describeValue(null));
-console.log(describeValue(undefined));
-console.log(describeValue(NaN));
-console.log(describeValue({}));
-console.log(describeValue([]));
+console.log(getDayType("Saturday"));
+console.log(getDayType("saturday"));
