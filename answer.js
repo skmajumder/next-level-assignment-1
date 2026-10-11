@@ -39,5 +39,11 @@ function getDayType(day) {
   }
 }
 
-console.log(getDayType("Saturday"));
-console.log(getDayType("saturday"));
+console.log(getDayType("Friday"));
+console.log(getDayType("SATURDAY"));
+console.log(getDayType("sunday"));
+console.log(getDayType("Monday"));
+console.log(getDayType("tuesday"));
+console.log(getDayType("Wednesday"));
+console.log(getDayType("Thursday"));
+console.log(getDayType("Bandarban"));
