@@ -59,10 +59,30 @@ function validateUsername(username) {
   return "Available";
 }
 
-console.log(validateUsername("rahim123"));
-console.log(validateUsername("ab"));
-console.log(validateUsername("a b"));
-console.log(validateUsername("abcd"));
-console.log(validateUsername("rahim islam"));
-console.log(validateUsername("superadmin99"));
-console.log(validateUsername("Admin_Rahim"));
+// console.log(validateUsername(" abcd"));
+// console.log(validateUsername("abcd "));
+// console.log(validateUsername("   "));
+// console.log(validateUsername("    "));
+// console.log(validateUsername("ad min"));
+// console.log(validateUsername("my admin"));
+// console.log(validateUsername("  admin  "));
+
+// * Question 4
+
+function getCngFare(distance, isNight = false, waitingMinutes = 0) {
+  let fare = 50;
+
+  if (distance > 2) {
+    fare += (distance - 2) * 15;
+  }
+
+  fare += waitingMinutes * 2;
+
+  if (isNight) {
+    fare *= 1.2;
+  }
+
+  return fare;
+}
+
+console.log(getCngFare(5, true, 10));
