@@ -2,12 +2,12 @@
 
 // * Question 1
 
-// function describeValue(value) {
-//   if (value) {
-//     return typeof value + " | truthy";
-//   }
-//   return typeof value + " | falsy";
-// }
+function describeValue(value) {
+  if (value) {
+    return typeof value + " | truthy";
+  }
+  return typeof value + " | falsy";
+}
 
 // console.log(describeValue(7));
 // console.log(describeValue("hello"));
@@ -39,11 +39,30 @@ function getDayType(day) {
   }
 }
 
-console.log(getDayType("Friday"));
-console.log(getDayType("SATURDAY"));
-console.log(getDayType("sunday"));
-console.log(getDayType("Monday"));
-console.log(getDayType("tuesday"));
-console.log(getDayType("Wednesday"));
-console.log(getDayType("Thursday"));
-console.log(getDayType("Bandarban"));
+// console.log(getDayType("Friday"));
+// console.log(getDayType("SATURDAY"));
+// console.log(getDayType("sunday"));
+// console.log(getDayType("Monday"));
+// console.log(getDayType("tuesday"));
+// console.log(getDayType("Wednesday"));
+// console.log(getDayType("Thursday"));
+// console.log(getDayType("Bandarban"));
+
+// * Question 3
+
+function validateUsername(username) {
+  const name = username.toLowerCase();
+
+  if (name.length < 4) return "Too Short";
+  if (name.includes(" ")) return "No Space Allowed";
+  if (name.includes("admin")) return "Reserved Word";
+  return "Available";
+}
+
+console.log(validateUsername("rahim123"));
+console.log(validateUsername("ab"));
+console.log(validateUsername("a b"));
+console.log(validateUsername("abcd"));
+console.log(validateUsername("rahim islam"));
+console.log(validateUsername("superadmin99"));
+console.log(validateUsername("Admin_Rahim"));
